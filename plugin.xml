@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-lcsplugin" version="0.0.1">
+    <name>LCSPlugin</name>
+
+    <description>An Android Cordova plugin that allows users to comunicate with LCS standalone server.</description>
+    <license>MIT</license>
+
+    <keywords>cordova,android,LCS,message,alert</keywords>
+    <repo>https://github.com/radoslavmihalus/lcsplugin.git</repo>
+    <issue>https://github.com/radoslavmihalus/lcsplugin/issues</issue>
+  
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+  
+    <js-module src="www/lcsplugin.js" name="lcsPlugin">
+        <clobbers target="window.plugins.lcsPlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ToastyPlugin">
+                <param name="android-package" value="com.blueticket.cordova.plugin.LCSPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/LCSPlugin.java" target-dir="src/com/blueticket/cordova/plugin" />
+    </platform>
+</plugin>
