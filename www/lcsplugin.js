@@ -16,5 +16,6 @@ LCSPlugin.install = function () {
     }
     window.plugins.lcsPlugin = new LCSPlugin();
     return window.plugins.lcsPlugin;
+    
 };
 cordova.addConstructor(LCSPlugin.install);
