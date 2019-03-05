@@ -1,7 +1,7 @@
 {
   "name": "cordova-plugin-lcsplugin",
-  "version": "0.0.1",
-  "description": ">An Android Cordova plugin that allows users to comunicate with LCS standalone server.",
+  "version": "0.1.0",
+  "description": "A sample for a new cordova plugin",
   "cordova": {
     "id": "cordova-plugin-lcsplugin",
     "platforms": [
@@ -13,23 +13,16 @@
     "url": "git+https://github.com/radoslavmihalus/lcsplugin.git"
   },
   "keywords": [
-    "LCS",
-    "Notification",
-    "Message",
-    "Alert",
+    "cordova",
+    "plugin",
+    "hello",
     "ecosystem:cordova",
     "cordova-android"
   ],
-  "engines": [
-    {
-      "name": "cordova",
-      "version": ">=3.0.0"
-    }
-  ],
-  "author": "BlueTicket EU <info@blueticket.eu>",
-  "license": "MIT",
+  "author": "Don Coleman",
+  "license": "Apache-2",
   "bugs": {
     "url": "https://github.com/radoslavmihalus/lcsplugin/issues"
   },
-  "homepage": "https://github.com/radoslavmihalus/lcsplugin/"
+  "homepage": "https://github.com/radoslavmihalus/lcsplugin"
 }

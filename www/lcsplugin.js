@@ -1,21 +1,7 @@
-// Empty constructor
-function LCSPlugin() {}
+/*global cordova, module*/
 
-// The function that passes work along to native shells
-// script is a string
-LCSPlugin.prototype.send = function (script, successCallback, errorCallback) {
-    var options = {};
-    options.script = script;
-    cordova.exec(successCallback, errorCallback, 'LCSPlugin', 'send', [options]);
-}
-
-// Installation constructor that binds LCSPlugin to window
-LCSPlugin.install = function () {
-    if (!window.plugins) {
-        window.plugins = {};
+module.exports = {
+    send: function (script, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "LCSPlugin", "send", [script]);
     }
-    window.plugins.lcsPlugin = new LCSPlugin();
-    return window.plugins.lcsPlugin;
-    
 };
-cordova.addConstructor(LCSPlugin.install);
