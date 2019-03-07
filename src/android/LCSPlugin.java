@@ -13,12 +13,13 @@ public class LCSPlugin extends CordovaPlugin {
 
             String name = data.getString(0);
             String message = "Hello, " + name;
+
             callbackContext.success(message);
 
             return true;
 
         } else {
-            
+
             return false;
 
         }
